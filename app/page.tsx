@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -13,9 +14,9 @@ export default function Home() {
   // Calculator State
   const [calcBill, setCalcBill] = useState<number>(5000);
 
-  // Solar Math Logic (Approximate values for India)
-  const systemSize = Math.max(1, (calcBill / 8 / 120)).toFixed(1); // Rs 8 per unit, 1kW = 120 units/month
-  const estimatedSavings = (calcBill * 12 * 25).toLocaleString('en-IN'); // 25 years savings
+  // Solar Math Logic
+  const systemSize = Math.max(1, (calcBill / 8 / 120)).toFixed(1); 
+  const estimatedSavings = (calcBill * 12 * 25).toLocaleString('en-IN'); 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,12 +45,19 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* Navbar */}
+      {/* Updated Navbar with Navigation Links */}
       <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold tracking-wider">
+          <Link href="/" className="text-2xl font-bold tracking-wider text-white">
             Wise<span className="text-[#2ecc71]">Green</span> Energy
+          </Link>
+          
+          {/* Main Links */}
+          <div className="hidden md:flex gap-8 items-center">
+            <Link href="/services" className="text-gray-300 hover:text-[#2ecc71] font-semibold transition-all">Services</Link>
+            <Link href="/blog" className="text-gray-300 hover:text-[#2ecc71] font-semibold transition-all">Knowledge Hub</Link>
           </div>
+
           <a href="#contact" className="bg-[#2ecc71] hover:bg-[#27ae60] text-black px-6 py-2 rounded transition-all font-bold">
             Get a Quote
           </a>
@@ -115,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Form connected to cPanel API */}
+      {/* Contact Form */}
       <section id="contact" className="py-24 bg-black">
         <div className="max-w-3xl mx-auto px-6">
           <div className="p-10 border border-gray-800 bg-[#0a0a0a] rounded-xl shadow-2xl">
