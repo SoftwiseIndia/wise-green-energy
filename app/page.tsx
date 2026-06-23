@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -45,27 +44,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* Updated Navbar with Navigation Links */}
-      <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold tracking-wider text-white">
-            Wise<span className="text-[#2ecc71]">Green</span> Energy
-          </Link>
-          
-          {/* Main Links */}
-          <div className="hidden md:flex gap-8 items-center">
-            <Link href="/services" className="text-gray-300 hover:text-[#2ecc71] font-semibold transition-all">Services</Link>
-            <Link href="/blog" className="text-gray-300 hover:text-[#2ecc71] font-semibold transition-all">Knowledge Hub</Link>
-          </div>
-
-          <a href="#contact" className="bg-[#2ecc71] hover:bg-[#27ae60] text-black px-6 py-2 rounded transition-all font-bold">
-            Get a Quote
-          </a>
-        </div>
-      </nav>
-
       {/* Cinematic Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
+      <section className="relative h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center -mt-20">
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/50"></div>
         <div className="relative text-center px-6 max-w-4xl z-10 mt-16">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white">
@@ -153,14 +133,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 bg-black border-t border-gray-900 text-center">
-        <p className="text-gray-500 text-sm">© 2026 Wise Green Energy. All Rights Reserved.</p>
-        <p className="text-gray-600 mt-2 text-xs font-semibold tracking-widest">
-          Powered by <span className="text-[#2ecc71]">SoftWise India Innovations</span>
-        </p>
-      </footer>
     </main>
   );
 }
