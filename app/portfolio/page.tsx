@@ -43,24 +43,7 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] pt-24 pb-12">
-      {/* Navbar */}
-      <nav className="fixed w-full z-50 top-0 bg-black/80 backdrop-blur-md border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold tracking-wider text-white">
-            Wise<span className="text-[#2ecc71]">Green</span> Energy
-          </Link>
-          <div className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-300 hover:text-[#2ecc71] transition-colors font-semibold">Home</Link>
-            <Link href="/services" className="text-gray-300 hover:text-[#2ecc71] transition-colors font-semibold">Services</Link>
-            <Link href="/blog" className="text-gray-300 hover:text-[#2ecc71] transition-colors font-semibold">Blogs</Link>
-          </div>
-          <Link href="/#contact" className="bg-[#2ecc71] hover:bg-[#27ae60] text-black px-6 py-2 rounded transition-all font-bold">
-            Get a Quote
-          </Link>
-        </div>
-      </nav>
-
+    <main className="min-h-screen bg-[#0a0a0a] pb-12">
       {/* Hero Header */}
       <section className="max-w-7xl mx-auto px-6 mt-10 text-center mb-20">
         <p className="text-[#2ecc71] uppercase tracking-widest font-semibold mb-3 text-sm">Engineering Excellence</p>
