@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
+import WhatsAppButton from "../common/WhatsAppButton";
 
 export const metadata = {
   title: "Wise Green Energy - Premium Solar Solutions",
