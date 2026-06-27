@@ -1,7 +1,8 @@
 import "./globals.css";
+import Script from "next/script"; // Next.js Optimization ke liye import kiya
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import WhatsAppButton from "../common/WhatsAppButton"; // Import kiya
+import WhatsAppButton from "../common/WhatsAppButton";
 
 export const metadata = {
   title: "Wise Green Energy - Premium Solar Solutions",
@@ -9,6 +10,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+
+  const gaId = "G-XDQYK9R9W8"; 
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -16,6 +20,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-[#0a0a0a] text-white flex flex-col min-h-screen relative">
         
+ 
+        {gaId !== "G-XDQYK9R9W8" && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+
         {/* Dynamic Header Component */}
         <Header />
 
@@ -27,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Dynamic Footer Component */}
         <Footer />
         
-        {/* YAHAN RAKHNA HAI WHATSAPP BUTTON */}
+        {/* Floating WhatsApp Widget */}
         <WhatsAppButton />
 
       </body>
