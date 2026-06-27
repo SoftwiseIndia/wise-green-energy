@@ -1,7 +1,7 @@
 import "./globals.css";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import WhatsAppButton from "../common/WhatsAppButton";
+import WhatsAppButton from "../common/WhatsAppButton"; // Import kiya
 
 export const metadata = {
   title: "Wise Green Energy - Premium Solar Solutions",
@@ -10,11 +10,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <script src="https://cdn.tailwindcss.com"></script>
       </head>
-      <body className="bg-[#0a0a0a] text-white flex flex-col min-h-screen">
+      <body className="bg-[#0a0a0a] text-white flex flex-col min-h-screen relative">
         
         {/* Dynamic Header Component */}
         <Header />
@@ -26,6 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Dynamic Footer Component */}
         <Footer />
+        
+        {/* YAHAN RAKHNA HAI WHATSAPP BUTTON */}
+        <WhatsAppButton />
 
       </body>
     </html>
