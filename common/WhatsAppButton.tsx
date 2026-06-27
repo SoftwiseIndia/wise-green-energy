@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function WhatsAppButton() {
 
-  const phoneNumber = "91 7055 7054 55"; 
+  const phoneNumber = "917055705455"; 
   const message = encodeURIComponent("Hi Wise Green Energy, I want to book a free solar site inspection.");
   const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
 
