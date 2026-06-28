@@ -35,9 +35,9 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Get in Touch</h3>
           <ul className="space-y-3 text-sm text-gray-400 font-medium">
-            <li className="flex items-center gap-2"><span>📞</span> +91 98765 43210</li>
-            <li className="flex items-center gap-2"><span>✉️</span> projects@wisegreenenergy.in</li>
-            <li className="flex items-center gap-2"><span>📍</span> Haryana, India</li>
+            <li className="flex items-center gap-2"><span>📞</span> +91 7055 7054 55</li>
+            <li className="flex items-center gap-2"><span>✉️</span> info@wisegreenenergy.in</li>
+            <li className="flex items-center gap-2"><span>📍</span> Sirsa, Haryana, India</li>
           </ul>
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-gray-900 text-center md:flex md:justify-between md:items-center">
         <p className="text-gray-500 text-sm mb-4 md:mb-0">© 2026 Wise Green Energy. All Rights Reserved.</p>
         <p className="text-gray-600 text-xs font-bold tracking-widest uppercase">
-          Powered by <span className="text-[#2ecc71]">SoftWise India Innovations</span>
+          Initiate by <span className="text-[#2ecc71]">SoftWise India Innovations</span>
         </p>
       </div>
     </footer>
