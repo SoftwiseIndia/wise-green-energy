@@ -17,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="scroll-smooth">
       <head>
         <script src="https://cdn.tailwindcss.com"></script>
+        <meta name="google-site-verification" content="c2n0rSIgKIbaTm9eW4TYJQkTsG3Y6XIyeBHN6RfzehU" />
       </head>
       <body className="bg-[#0a0a0a] text-white flex flex-col min-h-screen relative">
         
