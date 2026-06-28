@@ -1,12 +1,14 @@
 import Link from "next/link";
 
+// Yeh line add karni hai
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Green Energy Blog - Wise Green Energy",
   description: "Read our latest articles on solar panels, green energy savings, and government subsidies in India.",
 };
 
 export default async function BlogList() {
-  // cPanel API se real-time data fetch karna
   let blogs = [];
   try {
     const res = await fetch("https://wisegreenenergy.in/get_blogs.php", { cache: "no-store" });
