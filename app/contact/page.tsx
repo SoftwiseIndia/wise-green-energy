@@ -37,7 +37,7 @@ export default function ContactPage() {
               <div className="w-12 h-12 bg-[#2ecc71]/10 rounded-full flex items-center justify-center text-[#2ecc71] text-2xl shrink-0">✉️</div>
               <div>
                 <h3 className="text-white text-xl font-bold mb-2">Direct Email</h3>
-                <p className="text-gray-400">projects@wisegreenenergy.in</p>
+                <p className="text-gray-400">info@wisegreenenergy.in</p>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
               <div className="w-12 h-12 bg-[#2ecc71]/10 rounded-full flex items-center justify-center text-[#2ecc71] text-2xl shrink-0">📞</div>
               <div>
                 <h3 className="text-white text-xl font-bold mb-2">Engineering Hotline</h3>
-                <p className="text-gray-400">+91 98765 43210</p>
+                <p className="text-gray-400">+91 7055 7054 55</p>
               </div>
             </div>
           </div>
