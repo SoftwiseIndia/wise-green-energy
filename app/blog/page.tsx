@@ -11,7 +11,7 @@ export const metadata = {
 export default async function BlogList() {
   let blogs = [];
   try {
-    const res = await fetch("https://wisegreenenergy.in/get_blogs.php", { cache: "no-store" });
+    const res = await fetch("https://api.wisegreenenergy.in/get_blogs.php", { cache: "no-store" });
     if (res.ok) {
       blogs = await res.json();
     }
