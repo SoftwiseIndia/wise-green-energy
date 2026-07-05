@@ -5,7 +5,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   let blog = null;
   
   try {
-    const res = await fetch(`https://wisegreenenergy.in/get_blogs.php?slug=${params.slug}`, { cache: "no-store" });
+    const res = await fetch(`https://api.wisegreenenergy.in/get_blogs.php?slug=${params.slug}`, { cache: "no-store" });
     if (res.ok) {
       const data = await res.json();
       if (data && data.length > 0) {
