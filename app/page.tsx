@@ -22,7 +22,7 @@ export default function Home() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://wisegreenenergy.in/api.php", {
+      const response = await fetch("https://api.wisegreenenergy.in/api.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ export default function Home() {
       <section id="contact" className="py-24 bg-black">
         <div className="max-w-3xl mx-auto px-6">
           <div className="p-10 border border-gray-800 bg-[#0a0a0a] rounded-xl shadow-2xl">
-            <h2 className="text-3xl font-bold mb-2 text-white">Request Free Inspection</h2>
+            <h2 className="text-3xl font-bold mb-2 text-white">Request Site Inspection</h2>
             <p className="text-gray-400 mb-8">Enter your details to get a customized 4K site review and quotation.</p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
